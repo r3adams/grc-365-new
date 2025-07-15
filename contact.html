@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hot Air Ballooning</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 928px;
+        height: auto;
+        background: white;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+        margin: 0 auto;
+    } main {
+        width: 78%;
+        margin: 36px auto;
+    } header img {
+        width: 100%;
+        // margin-bottom: 24px;
+    } header h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin-top: 64px;
+        text-shadow: 2px 3px 6px goldenrod;
+    } header p {
+        font: 14pt/1.4em Georgia, serif;
+        width: 65ch;
+        margin: 24px auto;
+    } main {
+        width: 80%;
+        height: auto;
+        min-height: 624px;
+    } main figure {
+        width: 200px;
+        height: auto;
+        margin: 18px;
+    } main img {
+        width: 200px;
+        height: auto;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+    } figcaption {
+        font: 12pt/1.4em Georgia, serif;
+        text-align: center;
+    } ul {
+        width: 100%;
+        margin-top: -3px;
+    } li {
+        width: 19.89%;
+        height: 35px;
+        float: left;
+        list-style: none;
+        text-align: center;
+        font: 14pt/1.8em Roboto, sans-serif;
+        background: gainsboro;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } li:last-child {
+        border-left: 1px solid white;
+    } form {
+        width: 600px;
+        margin: 0 auto;
+        background: rgba(0,255,255,0.10);
+        padding: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    } input {
+        width: 100%;
+        height: 35px;
+    } label {
+        font: 14pt/1.4em Georgia;
+        margin-top: 12px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <img src="daniela.jpg" />
+            <ul>
+                <a href="index.html"><li>Home</li>
+                </a>
+                <a href="trips.html">
+                <li>Trips</li>
+                </a>
+                <a href="locations.html">
+                <li>Locations</li>
+                </a>
+                <a href="about.html">
+                <li>About</li>
+                </a>
+                <li>Contact</li>
+            </ul>
+            <h1>Contact</h1>
+        </header>
+        <main>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="6ea120b7-cd45-45b2-9d04-d25d239c2088">
+            <label>Name</label>
+            <input type="text" name="name" required>
+            <label>Email</label>
+            <input type="email" name="email" required>
+            <label>Subject</label>
+            <input type="text" name="title" required>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input style="width: 200px; height: 40px; margin: 24px auto; background: lightgreen; border-radius: 6px;" type="submit" value="Send">
+            </form>
+        </main>
+    </div>
+</body>
+</html>

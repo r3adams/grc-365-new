@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hot Air Ballooning</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 928px;
+        height: 1228px;
+        background: white;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+        margin: 0 auto;
+    } main {
+        width: 78%;
+        margin: 36px auto;
+    } header img {
+        width: 100%;
+        // margin-bottom: 24px;
+    } header h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin-top: 64px;
+        text-shadow: 2px 3px 6px goldenrod;
+    } main {
+        width: 80%;
+        height: auto;
+        min-height: 624px;
+        // border: 1px dashed dimgray;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } main figure {
+        width: 200px;
+        height: auto;
+        margin: 18px;
+    } main img {
+        width: 200px;
+        height: auto;
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+    } figcaption {
+        font: 12pt/1.4em Georgia, serif;
+        text-align: center;
+    } ul {
+        width: 100%;
+        margin-top: -3px;
+    } li {
+        width: 19.89%;
+        height: 35px;
+        float: left;
+        list-style: none;
+        text-align: center;
+        font: 14pt/1.8em Roboto, sans-serif;
+        background: gainsboro;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: lightgray;
+    } li:last-child {
+        border-left: 1px solid white;
+    }
+</style>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <img src="daniela.jpg" />
+            <ul>
+                <a href="index.html"><li>Home</li>
+                </a>
+                <li>Trips</li>
+                <a href="locations.html">
+                <li>Locations</li>
+                </a>
+                <a href="about.html">
+                <li>About</li>
+                </a>
+                <a href="contact.html">
+                <li>Contact</li>
+                </a>
+            </ul>
+            <h1>Hot Air Balloon Trips</h1>
+        </header>
+        <main>
+            <figure>
+                <a href="balloon-pilot.jpg">
+                <img src="balloon-pilot.jpg" />
+                </a>
+               <figcaption>California Rockies</figcaption>
+            </figure>
+            <figure>
+                <a href="balloon-pilot-forest.jpg">
+                <img src="balloon-pilot-forest.jpg" />
+                </a>
+                <figcaption>Colorado wilderness</figcaption>
+            </figure>
+            <figure>
+                <a href="balloon-pilot-autumn.jpg">
+                <img src="balloon-pilot-autumn.jpg" />
+                </a>
+                <figcaption>Vermont in autumn</figcaption>
+            </figure>
+        </main>
+    </div>
+</body>
+</html>
