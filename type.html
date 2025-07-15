@@ -49,7 +49,7 @@
         width: 100%;
         margin-top: -3px;
     } li {
-        width: 19.89%;
+        width: 16.555%;
         height: 35px;
         float: left;
         list-style: none;
@@ -62,8 +62,15 @@
         background: lightgray;
     } li:last-child {
         border-left: 1px solid white;
-    }
-</style>
+    } ul li ul li {
+        visibility: hidden;
+        width: 100%;
+        float: none;
+    } ul li:hover li {
+        visibility: visible;
+    } a {
+        text-decoration: none;
+    }</style>
 </head>
 
 <body>
@@ -73,7 +80,9 @@
             <ul>
                 <a href="index.html"><li>Home</li>
                 </a>
+                <a href="trips.html">
                 <li>Trips</li>
+                </a>
                 <a href="locations.html">
                 <li>Locations</li>
                 </a>
@@ -83,6 +92,15 @@
                 <a href="contact.html">
                 <li>Contact</li>
                 </a>
+                <li>Demos
+                    <ul>
+                        <a href="grid.html"><li>Grid</li>
+                        </a>
+                        <a href="type.html">
+                        <li>Type</li>
+                        </a>
+                    </ul>
+                </li>
             </ul>
             <h1>On Ballooning …</h1>
         </header>

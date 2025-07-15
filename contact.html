@@ -52,7 +52,7 @@
         width: 100%;
         margin-top: -3px;
     } li {
-        width: 19.89%;
+        width: 16.555%;
         height: 35px;
         float: left;
         list-style: none;
@@ -65,6 +65,14 @@
         background: lightgray;
     } li:last-child {
         border-left: 1px solid white;
+    } ul li ul li {
+        visibility: hidden;
+        width: 100%;
+        float: none;
+    } ul li:hover li {
+        visibility: visible;
+    } a {
+        text-decoration: none;
     } form {
         width: 600px;
         margin: 0 auto;
@@ -80,7 +88,6 @@
         font: 14pt/1.4em Georgia;
         margin-top: 12px;
     }
-
     </style>
 </head>
 
@@ -100,7 +107,18 @@
                 <a href="about.html">
                 <li>About</li>
                 </a>
+                <a href="contact.html">
                 <li>Contact</li>
+                </a>
+                <li>Demos
+                    <ul>
+                        <a href="grid.html"><li>Grid</li>
+                        </a>
+                        <a href="type.html">
+                        <li>Type</li>
+                        </a>
+                    </ul>
+                </li>
             </ul>
             <h1>Contact</h1>
         </header>
