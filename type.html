@@ -27,8 +27,11 @@
     } header h1 {
         font: 48pt/1.4em 'Dancing Script';
         text-align: center;
-        margin-top: 64px;
+        margin-top: 24px;
         text-shadow: 2px 3px 6px goldenrod;
+    } header h2 {
+        font: italic 18pt/1.4em 'Source Serif';
+        text-align: center;
     } main {
         width: 72%;
         height: auto;
@@ -45,17 +48,16 @@
         text-indent: 1.5em;
     } main p:nth-child(odd) {
         padding-top: 12px;
-    } ul {
-        width: 100%;
-        margin-top: -3px;
     } li {
-        width: 16.555%;
+        width: 20%;
         height: 35px;
-        float: left;
+        border-radius: 6px;
         list-style: none;
         text-align: center;
         font: 14pt/1.8em Roboto, sans-serif;
-        background: gainsboro;
+        background: rgba(125,147,151,0.50);
+        margin: 0 auto;
+        display: block;
     } a li {
         color: black;
     } a li:hover {
@@ -77,32 +79,10 @@
     <div id="page">
         <header>
             <img src="daniela.jpg" />
-            <ul>
                 <a href="index.html"><li>Home</li>
                 </a>
-                <a href="trips.html">
-                <li>Trips</li>
-                </a>
-                <a href="locations.html">
-                <li>Locations</li>
-                </a>
-                <a href="about.html">
-                <li>About</li>
-                </a>
-                <a href="contact.html">
-                <li>Contact</li>
-                </a>
-                <li>Demos
-                    <ul>
-                        <a href="grid.html"><li>Grid</li>
-                        </a>
-                        <a href="type.html">
-                        <li>Type</li>
-                        </a>
-                    </ul>
-                </li>
-            </ul>
             <h1>On Ballooning …</h1>
+            <h2>A Type Sample with Dancing Script and Source Serif</h2>
         </header>
         <main>
         <p>In the dawn's gentle embrace, we rise,</p>
