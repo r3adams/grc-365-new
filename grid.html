@@ -12,7 +12,7 @@
         background: whitesmoke;
     } #page {
         width: 928px;
-        height: 1324px;
+        height: auto;
         background: white;
         border: 1px solid dimgray;
         box-shadow: 2px 3px 6px gray;
@@ -21,7 +21,7 @@
         width: 768px;
         height: 768px;
         margin: 36px auto;
-        border: 1px dashed gray;
+        // border: 1px dashed gray;
         display: grid;
         grid-gap: 1px;
         grid-template: repeat(3,256px) / repeat(2,384px);
@@ -71,6 +71,18 @@
         visibility: visible;
     } a {
         text-decoration: none;
+    } footer {
+        width: 80%;
+        height: auto;
+        min-height: 100px;
+        margin: 0 auto 48px auto;
+        // border: 1px dashed dimgray;
+    } footer p {
+        font: 14pt/1.4em Georgia, serif;
+    } footer h2 {
+        font: bold 14pt/1.4em Georgia, serif;
+        text-align: center;
+    }
 </style>
 </head>
 
@@ -86,8 +98,13 @@
             <img src="1-2balloonsH.jpg" />
             <img src="2-1balloonH.jpg" />
             <img src="3-multiballoonH.jpg" />
-            <img src="4_1balloonV.jpg" />
+            <img style="height: 300.5%;" src="4_1balloonV.jpg" />
         </main>
+        <footer>
+            <h2>Colophon</h2>
+            <p>This images in this gallery were arranged using a grid layout with 3 rows and 2 columns, of which the second column spans all three rows.</p>
+        </footer>
+
     </div>
 </body>
 </html>
