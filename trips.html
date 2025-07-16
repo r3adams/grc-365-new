@@ -12,7 +12,7 @@
         background: whitesmoke;
     } #page {
         width: 928px;
-        height: 1228px;
+        height: 1328px;
         background: white;
         border: 1px solid dimgray;
         box-shadow: 2px 3px 6px gray;
@@ -22,7 +22,6 @@
         margin: 36px auto;
     } header img {
         width: 100%;
-        // margin-bottom: 24px;
     } header h1 {
         font: 48pt/1.4em 'Dancing Script';
         text-align: center;
@@ -32,7 +31,7 @@
         width: 80%;
         height: auto;
         min-height: 624px;
-        // border: 1px dashed dimgray;
+        border: 1px dashed dimgray;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -54,6 +53,17 @@
         text-align: center;
             <a href="index.html"><li>Home</li>
             </a>
+    } footer {
+        width: 80%;
+        height: auto;
+        min-height: 100px;
+        margin: 0 auto;
+        border: 1px dashed dimgray;
+    } footer p {
+        font: 14pt/1.4em Georgia, serif;
+    } footer h2 {
+        font: bold 14pt/1.4em Georgia, serif;
+        text-align: center;
      } li {
         width: 20%;
         height: 35px;
@@ -64,7 +74,7 @@
         background: rgba(125,147,151,0.50);
         margin: 0 auto;
         display: block;
-   } a li {
+    } a li {
         color: black;
     } a li:hover {
         background: lightgray;
@@ -110,6 +120,10 @@
                 <figcaption>Vermont in autumn</figcaption>
             </figure>
         </main>
+        <footer>
+            <h2>Colophon</h2>
+            <p>This document was created using a hidden "text box" (&lt;main&gt;) set to "display: flex" with &lt;figure&gt; tags uniting each &lt;img&gt; with its corresponding &lt;figcaption&gt;. New thumbnails arrange themselves automatically on the page. A "zoom" effect was added with the transform and transition styles.</p>
+        </footer>
     </div>
 </body>
 </html>
