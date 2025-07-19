@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hot Air Ballooning</title>
+<link rel="icon" href="balloon-red-256.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>Untitled Document</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="   crossorigin="anonymous"></script>
+<script>
+   $(function(){
+       $('#list').sortable();
+   }); 
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    } body {
+        background: whitesmoke;
+    } #page {
+        width: 928px;
+        height: auto;
+        background: linear-gradient(to bottom right, rgba(255,215,0,0.20), white, white);
+        border: 1px solid dimgray;
+        box-shadow: 2px 3px 6px gray;
+        margin: 0 auto;
+    } h2 {
+        font: italic 18pt/1.4em 'Source Serif';
+        text-align: center;
+    } main {
+        width: 78%;
+        margin: 36px auto;
+    } header img {
+        width: 100%;
+        // margin-bottom: 24px;
+    } header h1 {
+        font: 48pt/1.4em 'Dancing Script';
+        text-align: center;
+        margin-top: 24px;
+        text-shadow: 2px 3px 6px goldenrod;
+    } main p {
+        font: 14pt/1.4em Georgia, serif;
+        width: 65ch;
+        margin: 24px auto;
+    } main {
+        width: 80%;
+        height: auto;
+        min-height: 624px;
+    } main figure {
+        width: 200px;
+        height: auto;
+        margin: 18px;
+    } main img {
+        width: 200px;
+        height: auto;
+        float: right;
+    } figcaption {
+        font: 12pt/1.4em Georgia, serif;
+        text-align: center;
+    } ul {
+        width: 100%;
+        height: 35px;
+        margin-top: -3px;
+    } li {
+        width: 20%;
+        height: 35px;
+        border-radius: 6px;
+        list-style: none;
+        text-align: center;
+        font: 14pt/1.8em Roboto, sans-serif;
+        background: rgba(125,147,151,0.50);
+        margin: 0 auto;
+        display: block;
+    } a li {
+        color: black;
+    } a li:hover {
+        background: rgba(144,238,144,0.5);
+    } ul li:hover li {
+        visibility: visible;
+    } a {
+        text-decoration: none;
+    } #container {
+        width: 320px;
+        height: 256px;
+        background: white;
+        border-radius: 12px;
+        margin: 24px auto;
+        font: 14pt/1.4em Roboto;
+        display: grid;
+        grid-template: repeat(4, 64px) / auto auto;
+    } #list {
+        width: 256px;
+        height: 256px;
+        background: white;
+        border-radius: 12px;
+    } .listitem {
+        width: 254px;
+        height: 62px;
+        background: orange;
+        border-radius: 12px;
+        margin: 2px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } #numbers {
+        width: 64px;
+        height: 256px;
+        float: left;
+    } .number {
+        width: 62px;
+        height: 62px;
+        background: lightgreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        margin: 2px 0;
+    } button {
+        width: 150px;
+        height: 38px;
+        border-radius: 12px;
+        background: lightblue;
+        margin: 36px auto;
+        display: block;
+        font: bold 12pt/1.4em Roboto;
+    } button:hover {
+        box-shadow: 2px 3px 6px darkgray;
+    }
+        
+
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <img src="daniela.jpg" />
+                <a href="index.html"><li>Home</li>
+                </a>
+            <h1>Reader Survey</h1>
+            <h2>What are your top reasons for considering a balloon ride?<br/>(Drag reasons to rearrange in order of preference.)</h2>
+        </header>
+        <main>
+    <div id="container">
+    <div id="numbers">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+    </div>
+    <div id="list">
+        <div class="listitem">sense of adventure</div>
+        <div class="listitem">spectacular views</div>
+        <div class="listitem">quiet reflection</div>
+        <div class="listitem">physics of balloons</div>
+    </div>
+    </div>
+    <button onClick="window.print()">Print Page</button>
+    </main>
+    </div>
+</body>
+</html>
