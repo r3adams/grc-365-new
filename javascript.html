@@ -12,9 +12,9 @@
 <script>
    $(function(){
        $('#list').sortable();
+       $('#balloon').draggable();
    }); 
 </script>
-
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 <style>
@@ -25,7 +25,7 @@
         background: whitesmoke;
     } #page {
         width: 928px;
-        height: auto;
+        height: 1536px;
         background: linear-gradient(to bottom right, rgba(255,215,0,0.20), white, white);
         border: 1px solid dimgray;
         box-shadow: 2px 3px 6px gray;
@@ -51,7 +51,7 @@
     } main {
         width: 80%;
         height: auto;
-        min-height: 624px;
+        // min-height: 320px;
     } main figure {
         width: 200px;
         height: auto;
@@ -126,14 +126,22 @@
         height: 38px;
         border-radius: 12px;
         background: lightblue;
-        margin: 36px auto;
+        margin: 0 auto;
         display: block;
         font: bold 12pt/1.4em Roboto;
     } button:hover {
         box-shadow: 2px 3px 6px darkgray;
+    } #balloon {
+        width: 150px;
+        display: block;
+        z-index: 1;
+    } #landscape {
+        width: 768px;
+        display: block;
+        margin: 12px auto;
+        position: relative;
+        top: -96px;
     }
-        
-
     </style>
 </head>
 
@@ -161,8 +169,11 @@
         <div class="listitem">physics of balloons</div>
     </div>
     </div>
-    <button onClick="window.print()">Print Page</button>
     </main>
+    <h2>Drag the balloon over the type of landscape over which you would like fly.</h2>
+    <img id="balloon" src="balloon-red.png" />
+    <img id="landscape" src="mountains-forest-desert.jpg" />
+    <button onClick="window.print()">Print Page</button>
     </div>
 </body>
 </html>
