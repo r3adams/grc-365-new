@@ -73,6 +73,24 @@
         visibility: visible;
     } a {
         text-decoration: none;
+    } #balloon {
+        width: 150px;
+        position: relative;
+        z-index: 1;
+        top: -150vh;
+        left: 10vw;
+        animation-name: rise;
+        animation-duration: 15s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        animation-delay: 2s;
+    } @keyframes rise {
+        0% {top: 50vh; transform: rotate(0deg);}
+        70% {transform: rotate(0deg);}
+        75% {transform: rotate(7.5deg);}
+        80% {transform: rotate(-7.5deg);}
+        85% {transform: rotate(0deg);}
+        100% {top: -150vh;}
     }
     </style>
 </head>
@@ -90,6 +108,6 @@
         <p>Growing up in the picturesque landscapes of New Mexico, Buckeye was captivated by the annual Albuquerque International Balloon Fiesta, which inspired him to pursue a career in ballooning. He trained rigorously under seasoned pilots, earning his commercial pilot's license and gaining expertise in meteorology and navigation.</p>
         <p>Known for his calm demeanor and attention to safety, Buckeye has piloted over 500 flights, offering passengers unforgettable experiences as they drift above stunning vistas and serene landscapes.</p>
         </main>
-    </div>
+        <img id="balloon" src="balloon-red.png" /> </div>
 </body>
 </html>
