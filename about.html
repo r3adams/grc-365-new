@@ -73,19 +73,30 @@
         visibility: visible;
     } a {
         text-decoration: none;
+    } footer {
+        // width: 80%;
+        height: auto;
+        min-height: 100px;
+        margin: 0 auto;
+        // border: 1px dashed dimgray;
+    } footer p {
+        font: 14pt/1.4em Georgia, serif;
+    } footer h2 {
+        font: bold 14pt/1.4em Georgia, serif;
+        text-align: center;
     } #balloon {
         width: 150px;
         position: relative;
         z-index: 1;
-        top: -150vh;
+        top: 110vh;
         left: 10vw;
         animation-name: rise;
         animation-duration: 15s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in;
-        animation-delay: 2s;
+        animation-delay: 1s;
     } @keyframes rise {
-        0% {top: 50vh; transform: rotate(0deg);}
+        0% {top: 110vh; transform: rotate(0deg);}
         70% {transform: rotate(0deg);}
         75% {transform: rotate(7.5deg);}
         80% {transform: rotate(-7.5deg);}
@@ -107,7 +118,13 @@
         <p><img src="balloon-pilot-transparent.png" />Buckeye Bottoms, a 35-year-old hot-air balloon pilot, has spent over a decade soaring through the skies, sharing his passion for flight with adventurers from around the world.</p>
         <p>Growing up in the picturesque landscapes of New Mexico, Buckeye was captivated by the annual Albuquerque International Balloon Fiesta, which inspired him to pursue a career in ballooning. He trained rigorously under seasoned pilots, earning his commercial pilot's license and gaining expertise in meteorology and navigation.</p>
         <p>Known for his calm demeanor and attention to safety, Buckeye has piloted over 500 flights, offering passengers unforgettable experiences as they drift above stunning vistas and serene landscapes.</p>
+        <footer>
+        <h2>Colophon</h2>
+        <p>The &ldquo;About&rdquo; page provides an example of CSS animation. The rising balloon moves from the bottom to the top of the page according to an @keyframes rule named &ldquo;rise&rdquo; and accompanying animation styles.</p>
+    </footer>
+
         </main>
-        <img id="balloon" src="balloon-red.png" /> </div>
+        <img id="balloon" src="balloon-red.png" />
+    </div>
 </body>
 </html>
