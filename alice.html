@@ -6,8 +6,8 @@
 <!-- Global or Embedded Style Sheet -->
 <style>
     @font-face {
-        font-family: Michelangelo;
-        src: url("OPTIMichaelAngelo.otf");
+        font-family: HarryPotter;
+        src: url("HarryPotter7.ttf");
     } @font-face {
         font-family: Georgia;
         src: url("Georgia.ttf");
@@ -21,14 +21,17 @@
         font-size: 14pt;
         line-height: 1.4em;
         width: 760px;
-        margin: 18px auto;
+        margin: 12px auto;
     } ul {
         margin-top: -14px;
     } h1 {
         text-align: center;
-        font: 36pt/1.4em Michelangelo;
-        text-shadow: 2px 3px 6px lightblue;
+        font: bold 42pt/1.4em HarryPotter;
+        filter: drop-shadow(1px 2px 0px black);
         margin-top: 72px;
+        background: linear-gradient(to right, crimson,turquoise,darkgreen);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     } #page {
         width: 928px;
         height: 1348px;
@@ -43,7 +46,7 @@
         shape-outside: url("alice-in-the-country.png");
         shape-margin: 36px;
     } span.dropcap {
-        font: 36pt/1.15em Michelangelo;
+        font: 48pt/0.90em HarryPotter;
         float: left;
         margin: 0 3px -3px 0;
         text-shadow: 0 0 12px white;
@@ -101,6 +104,7 @@
 <h2>Colophon</h2>
 <p>This page shows some examples of &ldquo;special effects&rdquo; for the web, including:
 <ul>
+    <li>color behind text</li>
     <li>drop-shadow under text (text-shadow)</li>
     <li>drop-cap with &ldquo;illuminated manuscript&rdquo; background created in Canva AI</li>
     <li>shape-around style to wrap text around a transparent PNG image</li>
