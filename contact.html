@@ -94,6 +94,13 @@
         text-align: center;
     }
 </style>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByName('system');
+        for(var checkbox in checkboxes)
+        checkboxes[checkbox].checked = source.checked;
+    }
+</script>
 </head>
 
 <body>
@@ -136,11 +143,13 @@
         </fieldset>
         <fieldset>
             <label>What type of system(s) do you have (check all that apply)?</label><br/>
-            <input type="checkbox" id="system1" name="system1" value="Mac">
+            <input type="checkbox" id="system" name="system" value="Mac"  onClick="toggle(this)">
+            <label for="system1"> Check/uncheck all</label><br/>
+            <input type="checkbox" id="system1" name="system" value="Mac">
             <label for="system1"> MacOS</label><br/>
-            <input type="checkbox" id="system2" name="system1" value="Windows">
+            <input type="checkbox" id="system2" name="system" value="Windows">
             <label for="system2"> Windows</label><br/>
-            <input type="checkbox" id="system3" name="system1" value="UNIX">
+            <input type="checkbox" id="system3" name="system" value="UNIX">
             <label for="system3"> UNIX</label>
         </fieldset>
         <fieldset>
