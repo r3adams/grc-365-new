@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Hot Air Ballooning</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
-    * {
+    @font-face {
+        font-family: Georgia;
+        src: url("Georgia.ttf");
+    } * {
         margin: 0;
         padding: 0;
     } body {
@@ -18,11 +21,12 @@
         box-shadow: 2px 3px 6px gray;
         margin: 0 auto;
     } main {
-        width: 78%;
+        width: 80%;
+        height: auto;
         margin: 36px auto;
     } header img {
         width: 100%;
-        // margin-bottom: 24px;
+        margin-bottom: 24px;
     } header h1 {
         font: 48pt/1.4em 'Dancing Script';
         text-align: center;
@@ -32,22 +36,6 @@
         font: 14pt/1.4em Georgia, serif;
         width: 65ch;
         margin: 24px auto;
-    } main {
-        width: 80%;
-        height: auto;
-        min-height: 624px;
-    } main figure {
-        width: 200px;
-        height: auto;
-        margin: 18px;
-    } main img {
-        width: 200px;
-        height: auto;
-        border: 1px solid dimgray;
-        box-shadow: 2px 3px 6px gray;
-    } figcaption {
-        font: 12pt/1.4em Georgia, serif;
-        text-align: center;
     } li {
         width: 20%;
         height: 35px;
@@ -62,14 +50,6 @@
         color: black;
     } a li:hover {
         background: lightgray;
-    } li:last-child {
-        border-left: 1px solid white;
-    } ul li ul li {
-        visibility: hidden;
-        width: 100%;
-        float: none;
-    } ul li:hover li {
-        visibility: visible;
     } a {
         text-decoration: none;
     } form {
@@ -81,12 +61,16 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-    } input {
+        font: 14pt/1.4em Georgia;
+    } #personal input {
         width: 100%;
         height: 35px;
+    } #personal textarea {
+        width: 100%;
     } label {
-        font: 14pt/1.4em Georgia;
         margin-top: 12px;
+    } select, input[type="submit"] {
+        font: 12pt/1.4em Roboto;
     } input[type="submit"] {
         width: 200px;
         height: 40px;
@@ -95,12 +79,14 @@
         border-radius: 6px;
     } input[type="submit"]:hover {
         opacity: 0.75;
+    } fieldset {
+        margin: 8px 0 8px 0;
+        padding: 12px;
     } footer {
         width: 80%;
         height: auto;
         min-height: 100px;
         margin: 0 auto 48px auto;
-        // border: 1px dashed dimgray;
     } footer p {
         font: 14pt/1.4em Georgia, serif;
     } footer h2 {
@@ -123,6 +109,8 @@
 
             <!-- Replace with your Access Key -->
             <input type="hidden" name="access_key" value="6ea120b7-cd45-45b2-9d04-d25d239c2088">
+
+        <div id="personal">        
             <label>Name</label>
             <input type="text" name="name" required>
             <label>Email</label>
@@ -130,14 +118,47 @@
             <label>Subject</label>
             <input type="text" name="title" required>
             <label>Message</label>
-            <textarea name="message" required></textarea>
-            <input style="" type="submit" value="Send">
-            </form>
-        </main>
-        <footer>
-            <h2>Colophon</h2>
-            <p>This contact form uses the free form-processing site "<a href="https://www.web3forms.com" target="_blank">web3forms.com</a>" to send the entered data to an email address.</p>
-        </footer>
-    </div>
+            <textarea name="message" rows="6" cols="72" required></textarea>
+        </div>        
+        <fieldset>
+            <label>Reason for contacting us (check only one):</label><br/>
+            <input type="radio" id="design" name="reason" value="Design">
+            <label for="html">Design services</label>
+            <br/>
+            <input type="radio" id="consulting" name="reason" value="Consulting">
+            <label for="css">Consulting</label>
+            <br/>
+            <input type="radio" id="interface" name="reason" value="UXD">
+            <label for="interface">Interface design</label>
+            <br/>
+            <input type="radio" id="other" name="reason" value="Other">
+            <label for="other">Other</label>
+        </fieldset>
+        <fieldset>
+            <label>What type of system(s) do you have (check all that apply)?</label><br/>
+            <input type="checkbox" id="system1" name="system1" value="Mac">
+            <label for="system1"> MacOS</label><br/>
+            <input type="checkbox" id="system2" name="system1" value="Windows">
+            <label for="system2"> Windows</label><br/>
+            <input type="checkbox" id="system3" name="system1" value="UNIX">
+            <label for="system3"> UNIX</label>
+        </fieldset>
+        <fieldset>
+            <label for="time">What is your timeframe?</label>
+            <select id="time" name="time">
+            <option value="asap">ASAP</option>
+            <option value="week">this week</option>
+            <option value="month">this month</option>
+            <option value="quarter">this quarter</option>
+            </select>
+        </fieldset>           
+    <input type="submit" value="Send">
+</form>
+</main>
+<footer>
+    <h2>Colophon</h2>
+    <p>This contact form uses the free form-processing site "<a href="https://www.web3forms.com" target="_blank">web3forms.com</a>" to send the entered data to an email address.</p>
+</footer>
+</div>
 </body>
 </html>
