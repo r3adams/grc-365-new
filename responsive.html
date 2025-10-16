@@ -14,7 +14,7 @@
     } #page {
         width: 928px;
         max-width: 98%;
-        height: 1548px;
+        height: 1848px;
         background: white;
         border: 1px solid dimgray;
         box-shadow: 2px 3px 6px darkgray;
@@ -22,7 +22,7 @@
     } main {
         width: 768px;
         max-width: 98%;
-        height: 1228px;
+        height: auto;
         margin: 0 auto;
         // border: 1px dashed dimgray;
     } h1 {
@@ -43,6 +43,7 @@
         list-style-position: inside
     } table {
         border-collapse: collapse;
+        margin-bottom: 24px;
         font: 12pt/1.4em Roboto, sans-serif;
         background: aliceblue;
         border: 1px solid rgb(210,218,225);
@@ -72,6 +73,21 @@
         background: rgba(144,238,144,0.5);
     } a {
         text-decoration: none;
+    } #percent, #vw {
+        font: 14pt/2.7em Roboto;
+        text-align: center;
+    } #percent {
+        width: 100%;
+        height: 50px;
+        background: lightblue;
+        margin-top: 24px;
+    } #vw {
+        width: 100vw;
+        height: 50px;
+        position: absolute;
+        margin: 24px 0;
+        left: 0;
+        background: lightgreen;
     } @media only screen and (max-width: 750px) {
         #page, main {
             height: auto;
@@ -84,7 +100,6 @@
             margin-bottom: 48px;
         }
     }
-
 </style>
 </head>
 
@@ -106,9 +121,9 @@
                 <th colspan="3" style="font-size: 16pt; padding: 8px 6px; color: dimgray;">Responsive Design Strategies for Common Screen Sizes</th>
             </tr>
             <tr>
-                <th>Width</th>
+                <th>Screen Width</th>
                 <th>Description</th>
-                <th>Approach</th>
+                <th>Responsive Approach</th>
             </tr>
             <tr>
                 <td>Full width<br/>(Desktop)</td>
@@ -137,9 +152,36 @@
             <li>stacking menu bar selections</li>
         </ul>
         </p>
-        <figcaption style="font-style: italic; color: black; font-size: 12pt;">Balloon photo by <a style="color: black;" href="https://unsplash.com/@kuponokuwamura?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kupono Kuwamura</a> on <a style="color: black;" href="https://unsplash.com/photos/yellow-green-and-black-hot-air-balloon-on-sky-vhnyfT8fmmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </figcaption>
+        <table>
+        <tr>
+            <th colspan="2" style="font-size: 16pt; padding: 8px 6px; color: dimgray;">Variable Measurements</th>
+        </tr>
+        <tr>
+            <th>Measurement</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>percent of enclosing tag (cannot be used for height)</td>
+        </tr>
+        <tr>
+            <td>vw*</td>
+            <td>viewport width (0–100), percent of the browser window width</td>
+        </tr>
+        <tr>
+            <td>vh*</td>
+            <td>viewport height (0–100), percent of the browser window height</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size: 10pt;">* vw can be used for height measurements, and vh can be used for width measurements</td>
+        </tr>
+        </table>
+        <p>The blue &lt;div&gt; below was set to width: 100%, while the green  was set to width: 100vw. Note that the blue div is 100% of the width of the enclosing tag, while the green is 100% of the browser window (“viewport”) width.</p>
         </main>
+        <div id="percent">width: 100%</div>
+        <div id="vw">width: 100vw</div>
+        <figcaption style="font-style: italic; color: black; font-size: 12pt; margin: 120px auto 0 auto; width: 768px; ">Balloon photo by <a style="color: black;" href="https://unsplash.com/@kuponokuwamura?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kupono Kuwamura</a> on <a style="color: black;" href="https://unsplash.com/photos/yellow-green-and-black-hot-air-balloon-on-sky-vhnyfT8fmmw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </figcaption>
     </div>
 </body>
 </html>
