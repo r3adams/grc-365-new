@@ -79,6 +79,8 @@
         border-radius: 6px;
     } input[type="submit"]:hover {
         opacity: 0.75;
+	} textarea {
+		font: 14pt/1.4em Roboto, sans-serif;
     } fieldset {
         margin: 8px 0 8px 0;
         padding: 12px;
@@ -92,7 +94,12 @@
     } footer h2 {
         font: bold 14pt/1.4em Georgia, serif;
         text-align: center;
-    }
+	} select {
+		width: 50%;
+	} option {
+		padding: 3px 6px;
+		background: lavender;
+	}
 </style>
 <script language="JavaScript">
     function toggle(source) {
@@ -118,42 +125,44 @@
             <input type="hidden" name="access_key" value="6ea120b7-cd45-45b2-9d04-d25d239c2088">
 
         <div id="personal">        
-            <label>Name</label>
+            <label>First name</label>
+            <input type="text" name="name" required>
+            <label>Last name</label>
             <input type="text" name="name" required>
             <label>Email</label>
             <input type="email" name="email" required>
             <label>Subject</label>
-            <input type="text" name="title" required>
+            <input type="text" name="subject" required>
             <label>Message</label>
-            <textarea name="message" rows="6" cols="72" required></textarea>
+            <textarea name="message" rows="4" cols="72" placeholder="&nbsp;Write message here."></textarea>
         </div>        
         <fieldset>
-            <label>Reason for contacting us (check only one):</label><br/>
+            <label>What is your main interest in ballooning?</label><br/>
             <input type="radio" id="design" name="reason" value="Design">
-            <label for="html">Design services</label>
+            <label for="html">Sightseeing</label>
             <br/>
-            <input type="radio" id="consulting" name="reason" value="Consulting">
-            <label for="css">Consulting</label>
+            <input type="radio" id="sightseeing" name="sightseeing">
+            <label for="css">Exploring lighter-than-air technology</label>
             <br/>
-            <input type="radio" id="interface" name="reason" value="UXD">
-            <label for="interface">Interface design</label>
+            <input type="radio" id="adventure" name="reason" value="UXD">
+            <label>Adventure</label>
             <br/>
             <input type="radio" id="other" name="reason" value="Other">
             <label for="other">Other</label>
         </fieldset>
         <fieldset>
-            <label>What type of system(s) do you have (check all that apply)?</label><br/>
-            <input type="checkbox" id="system" name="system" value="Mac"  onClick="toggle(this)">
-            <label for="system1"> Check/uncheck all</label><br/>
-            <input type="checkbox" id="system1" name="system" value="Mac">
-            <label for="system1"> MacOS</label><br/>
-            <input type="checkbox" id="system2" name="system" value="Windows">
-            <label for="system2"> Windows</label><br/>
-            <input type="checkbox" id="system3" name="system" value="UNIX">
-            <label for="system3"> UNIX</label>
+            <label>What trips interest you? (Check all that apply.)</label><br/>
+            <input type="checkbox" id="system" name="trips" onClick="toggle(this)">
+            <label>Check/uncheck all</label><br/>
+            <input type="checkbox" id="system1" name="trips" value="new-england">
+            <label>New England Foliage</label><br/>
+            <input type="checkbox" id="system2" name="trips" value="rocky-mountains">
+            <label>Rocky Mountains</label><br/>
+            <input type="checkbox" id="trips" name="trips" value="desert">
+            <label>Desert</label>
         </fieldset>
         <fieldset>
-            <label for="time">What is your timeframe?</label>
+            <label for="time">What is your timeframe?&nbsp;</label>
             <select id="time" name="time">
             <option value="asap">ASAP</option>
             <option value="week">this week</option>
